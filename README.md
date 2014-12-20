@@ -8,7 +8,7 @@ Drupal setup scripts for benchmark on Amazon EC2 using Vagrant &amp; Chef.
 
 1. Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads).
 2. Install [Vagrant](https://www.vagrantup.com/downloads).
-3. Install Vagrant plugins vagrant-aws, vagrant-hostupdater, vagrant-omnibus
+3. Install Vagrant plugins vagrant-aws, vagrant-omnibus
 4. Add this to your .bash_profile file.
 
 ```bash
@@ -55,7 +55,7 @@ VM, run `vagrant status NAME`.
 $ vagrant up t2.micro --provider=aws
 ```
 
-Chef provision runs automatically. After this, you can use drupal on http://t2.micro .
+Chef provision runs automatically. After this, you can use drupal.
 
 ### Stop & destroy instance
 
