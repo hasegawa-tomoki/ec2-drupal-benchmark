@@ -17,14 +17,14 @@ end
 
 # Install Drupal using Drush
 project_dir = "/var/www/#{node[:project][:code_name]}"
-bash "Install Drupal" do
+bash "Install Drupal to #{project_dir}" do
 	code <<-EOC
 		cd /var/www
 		/root/.composer/vendor/bin/drush dl drupal-#{node[:drupal][:version]}
 		rmdir #{node[:project][:code_name]}
 		mv drupal-#{node[:drupal][:version]} #{node[:project][:code_name]}
 	EOC
-	not_if { Dir.exist?(project_dir + "/README.txt") }
+	not_if { File.exist?(project_dir + "/README.txt") }
 end
 
 # Install Drupal modules using Drush
