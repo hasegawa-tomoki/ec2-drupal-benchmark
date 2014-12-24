@@ -49,7 +49,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 				chef.add_recipe "php"
 				chef.add_recipe "git"
 				chef.add_recipe "drupal"
-				
+				chef.add_recipe "nginx"
+				chef.add_recipe "hhvm"
+
 				# Uncomment if you want to restore Drupal using drupal.sql and settings.php
 				# drupal.sql: mysqldump -uroot drupal.sql
 				# settings.php: /var/www/drupal/sites/default/settings.php

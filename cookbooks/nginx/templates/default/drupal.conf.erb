@@ -1,0 +1,10 @@
+server {
+        listen 8080 default_server;
+
+        root /var/www/drupal;
+        index index.php;
+
+        server_name localhost;
+
+        include hhvm.conf;
+}
